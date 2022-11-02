@@ -1,4 +1,8 @@
-
+const testInitialList = [
+  { name: "Tablet", price: 200 },
+  { name: "Juego de Mesa", price: 40 },
+  { name: "Conga", price: 120 }
+]
 
 // function Item({ eachItem: {name, price} }) {
 function Item(props) {

@@ -14,15 +14,32 @@ function ShoppingList() {
 
   const [caja, setCaja] = useState(testInitialList)
 
+  const añadirProducto = (product) => {
+    console.log("añadiendo producto desde shoppingList", product)
+
+    // ... acá es que vamos a añadir el producto al estado
+    const copy = [...caja]
+    copy.push(product)
+    setCaja(copy)
+  }
+
   return (
     <div>
       
       <h3>Lista de compra</h3>
 
-      <AddForm />
+      <hr />
+
+      <AddForm 
+        addProduct={añadirProducto}
+        setCaja={setCaja}
+      />
+
+      <hr />
 
       <Search />
 
+      <hr />
 
       {/* varias veces */}
 
