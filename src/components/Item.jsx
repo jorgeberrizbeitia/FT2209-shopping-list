@@ -1,8 +1,4 @@
-const testInitialList = [
-  { name: "Tablet", price: 200 },
-  { name: "Juego de Mesa", price: 40 },
-  { name: "Conga", price: 120 }
-]
+import Card from 'react-bootstrap/Card';
 
 // function Item({ eachItem: {name, price} }) {
 function Item(props) {
@@ -15,12 +11,14 @@ function Item(props) {
   // console.log(props)
 
   return (
-    <div>
+    <Card>
 
-      <h5>{name}</h5>
-      <p>Price: {price}$</p>
+      <Card.Header>{name}</Card.Header>
+      <Card.Body>
+        <Card.Text>Price: {price}$</Card.Text>
+      </Card.Body>
 
-    </div>
+    </Card>
   )
 }
 
